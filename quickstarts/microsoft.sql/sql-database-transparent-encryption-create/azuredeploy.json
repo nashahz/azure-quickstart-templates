@@ -68,9 +68,7 @@
 		"primaryUserAssignedIdentityId": "[parameters('primaryUserAssignedIdentityId')]",
         "servicePrincipal": "[parameters('servicePrincipal')]",
         "version": "12.0"
-      },
-
-			
+      },	
       "resources": [
         {
           "name": "[variables('databaseName')]",
@@ -119,7 +117,7 @@
       ]
     }
 	
-		         "type": "Microsoft.Sql/managedInstances",
+	"type": "Microsoft.Sql/managedInstances",
             "identity": {
                 "type": "SystemAssigned"
             },
