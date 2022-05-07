@@ -105,7 +105,7 @@
           "name": "AllowAllMicrosoftAzureIps",
           "type": "firewallrules",
           "apiVersion": "2020-02-02-preview",
-          "location": "[variables('location')]",
+          "location": "[parameters('location')]",
           "properties": {
             "endIpAddress": "0.0.0.0",
             "startIpAddress": "0.0.0.0"
@@ -118,7 +118,7 @@
           "type": "managedIdentitySqlControlSettings",
           "apiVersion": "2019-06-01-preview",
           "name": "default",
-          "location": "[variables('location')]",
+          "location": "[parameters('location')]",
           "properties": {
             "grantSqlControlToManagedIdentity": {
               "desiredState": "Enabled"
