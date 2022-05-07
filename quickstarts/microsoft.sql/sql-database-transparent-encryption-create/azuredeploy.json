@@ -69,12 +69,8 @@
         "servicePrincipal": "[parameters('servicePrincipal')]",
         "version": "12.0"
       },
-	              "type": "Microsoft.Sql/managedInstances",
-            "identity": {
-                "type": "SystemAssigned"
-            },
-            "apiVersion": "2015-05-01-preview"
-			,
+
+			
       "resources": [
         {
           "name": "[variables('databaseName')]",
@@ -122,6 +118,12 @@
         }
       ]
     }
+	
+		         "type": "Microsoft.Sql/managedInstances",
+            "identity": {
+                "type": "SystemAssigned"
+            },
+            "apiVersion": "2015-05-01-preview"
   ],
   "outputs": {
     "sqlServerFqdn": {
