@@ -50,11 +50,18 @@
       "tags": {
         "displayName": "SqlServer"
       },
+	  
+	    "identity": {
+        "principalId": "",
+        "type": "SystemAssigned",
+        "tenantId": ""
+    }, 
+	  
       "properties": {
         "administratorLogin": "[parameters('sqlAdministratorLogin')]",
         "administratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]",
-        "primaryUserAssignedIdentityId": "",
-         "servicePrincipal": "",
+		 "primaryUserAssignedIdentityId": "",
+          "servicePrincipal": "",
         "version": "12.0"
       },
       "resources": [
@@ -102,9 +109,12 @@
             "[variables('sqlServerName')]"
           ]
         }
-      ]
+      
+	  ]
+	                "identity": ""
     }
   ],
+
   "outputs": {
     "sqlServerFqdn": {
       "type": "string",
