@@ -42,6 +42,12 @@
     "databaseServiceObjectiveName": "Basic"
   },
   "resources": [
+  
+  	    "identity": {
+        "principalId": "",
+        "type": "SystemAssigned",
+        "tenantId": ""
+    }, 
     {
       "name": "[variables('sqlServerName')]",
       "type": "Microsoft.Sql/servers",
@@ -50,12 +56,6 @@
       "tags": {
         "displayName": "SqlServer"
       },
-	  
-	    "identity": {
-        "principalId": "",
-        "type": "SystemAssigned",
-        "tenantId": ""
-    }, 
 	  
       "properties": {
         "administratorLogin": "[parameters('sqlAdministratorLogin')]",
