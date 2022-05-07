@@ -118,13 +118,17 @@
           "type": "managedIdentitySqlControlSettings",
           "apiVersion": "2019-06-01-preview",
           "name": "default",
-          "location": "[parameters('location')]",
-		  "dependsOn": [ "[variables('sqlServerName')]" ],
+          "location": "[parameters('location')]"
           "properties": {
             "grantSqlControlToManagedIdentity": {
               "desiredState": "Enabled"
             }
-          }
+          },
+		            "dependsOn": [
+            "[variables('sqlServerName')]"
+		  
+		  
+		  
         }
       ]
     }
