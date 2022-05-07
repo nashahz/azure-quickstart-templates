@@ -32,6 +32,19 @@
         "description": "Location for all resources."
       }
     }
+	,
+        "primaryUserAssignedIdentityId": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "resource id of a user assigned identity to be used by default."
+            }
+        }
+		,
+        "servicePrincipal": {
+            "type": "object",
+            "defaultValue": {}
+        }
   },
   "variables": {
     "sqlServerName": "[concat('sqlserver', uniqueString(subscription().id, resourceGroup().id))]",
