@@ -74,6 +74,7 @@
                 "type": "SystemAssigned"
             },
             "apiVersion": "2015-05-01-preview"
+			,
       "resources": [
         {
           "name": "[variables('databaseName')]",
