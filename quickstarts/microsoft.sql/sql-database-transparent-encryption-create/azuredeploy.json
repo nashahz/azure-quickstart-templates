@@ -53,8 +53,6 @@
       "properties": {
         "administratorLogin": "[parameters('sqlAdministratorLogin')]",
         "administratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]",
-        "primaryUserAssignedIdentityId": "",
-        "servicePrincipal": "",
         "version": "12.0"
       },
       "resources": [
@@ -102,11 +100,9 @@
             "[variables('sqlServerName')]"
           ]
         }
-      
-	  ]
+      ]
     }
   ],
-
   "outputs": {
     "sqlServerFqdn": {
       "type": "string",
