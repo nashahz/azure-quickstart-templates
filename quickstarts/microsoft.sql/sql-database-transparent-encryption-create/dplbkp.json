@@ -42,6 +42,7 @@
     "databaseServiceObjectiveName": "Basic"
   },
   "resources": [
+
     {
       "name": "[variables('sqlServerName')]",
       "type": "Microsoft.Sql/servers",
@@ -50,9 +51,18 @@
       "tags": {
         "displayName": "SqlServer"
       },
+	  
+	    
+  	    "identity": {
+        "principalId": "",
+        "type": "SystemAssigned",
+        "tenantId": ""
+    }, 
       "properties": {
         "administratorLogin": "[parameters('sqlAdministratorLogin')]",
         "administratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]",
+		 "primaryUserAssignedIdentityId": "",
+          "servicePrincipal": "",
         "version": "12.0"
       },
       "resources": [
@@ -100,9 +110,11 @@
             "[variables('sqlServerName')]"
           ]
         }
-      ]
+      
+	  ]
     }
   ],
+
   "outputs": {
     "sqlServerFqdn": {
       "type": "string",
