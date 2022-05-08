@@ -77,7 +77,8 @@
           "properties": {
             "edition": "[variables('databaseEdition')]",
             "collation": "[variables('databaseCollation')]",
-            "requestedServiceObjectiveName": "[variables('databaseServiceObjectiveName')]"
+            "requestedServiceObjectiveName": "[variables('databaseServiceObjectiveName')]",
+			"sampleName": "AdventureWorksLT"
           },
           "dependsOn": [
             "[variables('sqlServerName')]"
